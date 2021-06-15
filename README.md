@@ -5,6 +5,10 @@
 #### Project 1: "Get to Know Your Tools"
 ###### The first project does not include code because it is meant to help you get to know the different components and tools that the Arduino Kit includes, as well as the basic principles of electricity, so it is not included in the repository.
 
+##### Tools 101:
+
+##### General Codes (used in every project) and what they do:
+
 #### Project 2: "Spaceship Interference"
 ##### Main Idea:
 ###### For my second project, I created a simulation of the control panel of a spaceship, with the purpose of having a default green light when everything is under control, and pressing an "emergency switch" to turn on two red lights, to express that there is an emergency. 

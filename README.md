@@ -3,6 +3,9 @@
 ###### As part of my training at the Center for Neural Science at New York University, I have been following the instructions from the Arduino Starter Kit (linked in the "helpful links" section) to create very fun projects! Arduino makes it very easy to program microcontrollers, which are essentially tiny computers. First, the Arduino board reads inputs such as light on a sensor or the pressing of a switch. Then it turns it into an output, such as activating a motor. Each of the projects I have been working on can be found in their separate section below. I highlighted what is necessary for the Arduino board circuitry to work, the code uploaded to generate the function, and the personal lessons that I have learned (if any) from each project along the way! 
 
 #### Disclaimer:
+
+###### All the instructions I provide for the projects are obtained from the book included in the Starter Kit (linked in the helpful links section below.)
+
 ###### In the sections labeled "code," I mainly explain and go over the parts that I think are important to highlight. If you want a more detailed explanation of each part of the code, please check the corresponding project's comments.
 
 #### Project 1: "Get to Know Your Tools"
@@ -52,13 +55,18 @@
 ###### In the setup(), begin serial communication and set the direction of the digital pins. All the pins (green, red, and blue) will be outputs. In the loop(), read the sensor values of A0, A1, and A2, and store them in the right location. Then, use the function Serial.print() to print the sensors on the serial monitor. Convert the sensor reading from 0-1023 to a value between 0-25 by dividing it by 4. Then print the new values on another line. 
 
 #### Project 5: "Mood Cue"
-##### Main Idea:
+##### Main Idea: We are using a potentiometer for this project, which is essentially a knob that divides voltage. It has three pins; one is connected to power, the other to ground, and the middle communicates with the Arduino. As you turn the knob, the potentiometer registers the angle and sends the message to the board. The board then sends the angle to the servo motor, indicating where to move its branch. The project aims to use the servo motor to point out what mood you are in that day. You could create a cutout indicating what each angle means. For instance, if you turn it to 0, you are outraged, and 1023 could be very happy, but that is up to you!
 
 ##### Arduino Board: 
+###### After connecting the Arduino to power and ground, place the potentiometer on the breadboard. Connect one side to power and the other to ground. Then, connect the middle pin to analog pin 0. This will send the message to the board of where you want the motor to turn. The servo motor has three wires, and the order in which these are connected is important.  The kit includes male headers, which you will need to plug into the end of the servo wires to connect it to the breadboard. The red wire needs to be connected to power, the black to ground, and the white is the control that receives the input from the Arduino. Connect the white wire to pin 9. Place 100uf capacitors across power and ground next to the male haders and across the potentiometer to reduce changes caused by the components from the rest of the circuit. You need to be very careful when connecting the capacitors and make sure you are connecting the cathode to ground and the anode to power. A black stripe usally signals the cathode down the side. If you plug them in backward, they can explode. 
 
 ##### Code:
+###### At the beginning of the code, import the servo library, which allows you to use all necessary functions. Create the srevo object and declare your variables. In the setup, you need to tell the ARduino that the servo motor is attached to pin 9 and begin the serial communication with the computer. In the loop() you need to use the map() function to change the values between 0-1023 to the servo values, whcih are between 0-179 (because the motor can only move 180 degrees.) Store this new value in your angle varible and print out the mapped value to the monitor. Then, to move the servo use the command servo.write(), to move it to the angle that you sepcify, which will be automatically specified by how you move the potentiometer. 
 
 ##### Lessons Learned:
+###### The biggest lesson that I learned from this project is that whenever you have the serial monitor values accessible, you should use them to your favor and check for extreme values. For instance, my circuit was not working so we checked the serial monitor values when we moved the potentiometer to each extreme. It should've given values 0 on one side and 1023 on the other, however, it was not changing much from 330-340. That meant that something was wrong. From there I was able to debug the reason why the circuit was not working using the steps that i've mentioned for other projects above (drawing the circuit, checking if everything is okay with the way the circuit was built and that eveyrthing is properly connected, and finally checking the code for errors and making sure it matches to the physical circuit. 
+
+###### I also began seeing the real application of Arduino more clearly after completing this project. The servo motor is special because it does not spin around in a circle, but it moves to a specific position and stays there until you tell it to move again. They usually only rotate 180 degrees. If you wanted to build a robot that simulates human walking, you could use a servo motor to move the feet. Our feet do not have the capacity of turning 360 degrees, they often only turn 180, which is why it would be a perfect simulation. It is nice to think of the real-world application of the projects because then you can start finding the value of Arduino more.
 
 #### Project 6: "Light Theremin"
 ##### Main Idea:

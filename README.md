@@ -30,6 +30,7 @@
 
 #### Project 3: "Love-o-Meter"
 ##### Main Idea:
+###### This project uses a temperature sensor to measure how warm your skin is. You set the ambient temperature as a threshold in the code. When you touch the sensor, since your skin is possibly warmer than the baseline temperature, the sensor transforms heat to electrical energy and sends a change in voltage to the board, turning on LED lights. How many lights turn on depends on how much warmer than the baseline temperature your skin is. For instance, if your skin temperature is two degrees higher than the baseline but less than four degrees, it turns only one light. If it is six degrees above baseline, it turns all three lights on.
 
 ##### Arduino Board: 
 

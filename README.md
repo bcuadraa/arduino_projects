@@ -43,12 +43,13 @@
 
 #### Project 4: "Color Mixing Lamp"
 ##### Main Idea:
+###### Phototransistors are components that generate a current depending on the amount of light they absorb. In this project, we use three phototransistors, each with a different assigned color gel (red, blue, and green), to send a signal to a tri-color LED. The purpose is to simulate a lamp that changes colors depending on external light conditions. When placing a red gel over the phototransistor programmed to take its input, the LED will turn red. The same happens when using the blue and green gels. Keep in mind that your "lamp's" success in changing colors will depend on the light conditions of the testing environment.
 
 ##### Arduino Board: 
+###### After powering the board and connecting it to ground, place the three phototransistors, with one leg on each side of the board. Connect the long end to the power and the short end to ground using a 10-kilohm resistor. On the same side as the resistor, connect the phototransistors to Analog in pins 0, 1, and 2. This will allow the board to read specific colors at those locations. The color you place on each phototransistor matters because you are coding each phototransistor to receive that specific wavelength of color. Place the red over the one connected to A0, the green over A1, and the blue over A2. The LED that we are using is a tri-colored LED, also known as RGB led. This means that it has separate red, green, and blue elements inside and one common ground. Connect the longest pin of the LED to ground. Connect the remaining three LED legs to digital pins 9, 10, and 11 with 220-ohm resistors.
 
-##### Code:
-
-##### Lessons Learned:
+##### Code: 
+###### In the setup(), begin serial communication and set the direction of the digital pins. All the pins (green, red, and blue) will be outputs. In the loop(), read the sensor values of A0, A1, and A2, and store them in the right location. Then, use the function Serial.print() to print the sensors on the serial monitor. Convert the sensor reading from 0-1023 to a value between 0-25 by dividing it by 4. Then print the new values on another line. 
 
 #### Project 5: "Mood Cue"
 ##### Main Idea:

@@ -95,6 +95,11 @@
 ##### Code: 
 ###### For this project, we will need to create an array of the four notes we want to use for each of our switches. Declare the array before the setup() to make it a global variable. Then, in the setup, start the serial communication with the computer. The last step is the loop, where we will use if statements to determine which note to play for each switch. We tell the Arduino to play the notes corresponding to the specified analog value and stop playing the tone when nothing is pressed. 
 
+#### Project 8: "Digital Hourglass"
+
+##### Main Idea: 
+###### This project serves as a timer. Our main character is a tilt sensor, which is a switch that opens or closes depending on its orientation. The switch provides an input to the board, which is in the form of 
+
 #### Helpful Links:
 ##### * [Arduino Starter Kit: English Projects Book](https://www.amazon.com/Arduino-Starter-Kit-English-Official/dp/B009UKZV0A/ref=sr_1_4?dchild=1&keywords=arduino+starter+kit&qid=1623788219&sr=8-4)
 

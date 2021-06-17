@@ -98,7 +98,10 @@
 #### Project 8: "Digital Hourglass"
 
 ##### Main Idea: 
-###### This project serves as a timer. Our main character is a tilt sensor, which is a switch that opens or closes depending on its orientation. The switch provides an input to the board, which is in the form of 
+###### This project serves as a timer. Our main character is a tilt sensor, which is a switch that opens or closes depending on its orientation. The switch provides an input to the board in the form of how many milliseconds have passed since the last time an LED turned on. The purpose is to have a light turn on every 10 minutes, and since we have ten lights, it is a timer that works for up to an hour. 
+
+##### Arduino Board:
+###### Once the board is connected to power and ground, connect the longer leg of the six LEDs to digital pins 2-7 and the shorter legs to ground using 220-ohm resistors. Then, connect one side of the tilt to power and the other side to ground using a 10-kilohm resistor. Finally, connect the tilt switch to digital pin 8. 
 
 #### Helpful Links:
 ##### * [Arduino Starter Kit: English Projects Book](https://www.amazon.com/Arduino-Starter-Kit-English-Official/dp/B009UKZV0A/ref=sr_1_4?dchild=1&keywords=arduino+starter+kit&qid=1623788219&sr=8-4)

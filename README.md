@@ -76,12 +76,24 @@
 
 #### Project 6: "Light Theremin"
 ##### Main Idea:
+###### A Theremin is an instrument that the artist controls without physical contact. It operates using electromagnetic fields between two antennae, one that controls pitch and the other volume. We are simulating this instrument with our Arduino in a very simplified manner. We will use a phototransistor, which are the components that detect light that we used for the "Color-Mixing Lamp" project. Moving our hands over the sensor, we will change the amount of light that falls on the phototransistor, creating a change in voltage, determining the frequency of the note to play. This change in voltage will be sent to the Arduino, which will deliver it to the piezo, which we can think of as our tiny sound machine.
 
 ##### Arduino Board: 
+###### In terms of building the circuit, this is one of the simplest projects since it only has two components, the phototransistor and the piezo. First, connect the Arduino to power and ground. Then connect one end of the piezo to ground and the other end to digital pin eight on the Arduino. Finally, place the phototransistor on the breadboard and connect the long leg to power and the shorter leg to analog pin 0, using a 10-kilohm resistor. 
 
-##### Code:
+##### Code: 
+##### Before the setup(), create a variable to hold the values from the sensor. Next, we need to initialize variables to calibrate the sensor in the setup() section. To do the actual calibrating, we will use a while loop. We need to calibrate because our readings do not range from 0 to 1023. After all, the resistor limits the low end, and the brightness of the light limits the high end. We want to set the low value to 1023 and the high value to 0. We also need a calibration indicator to signal when the calibration is over. LED pin 13 is built into the board. We have to declare it as an integer before the setup and specify when it will be on and off in the while loop. In loop(), we need to call the function analogRead on pin A0, which will read the sensor value. We also need to create a variable named pitch that will be mapped from sensor value to be transformed into a frequency. Next, we call the tone function, which serves to play a sound. We have to specify what pin to play the sound on, what frequency to play, and how long to play the sound. We connected our piezo to pin 8 and received input from the pitch variable directly connected to the sensor, so we only have to decide how long to play the note (in ms). Finally, call delay() to give the sound more time to play. 
 
-##### Lessons Learned:
+#### Project 7: "Keyboard Instrument" 
+
+##### Main Idea: 
+###### We will continue creating sound for this project, this time trying to simulate a keyboard. We are using a resistor ladder, which means that we connect all the switches' outputs. However, a different voltage level passes through each pin (because they have different resistors allowing different levels of energy to pass), sending different messages that will be interpreted as different sounds. 
+
+##### Arduino Board:
+###### First, connect your breadboard to power and ground. Then, place the piezo and connect one end to ground and the other to pin 8. Then, place the switches on the breadboard. The first switch is connected directly to power. The second, third, and fourth are connected to power through different level resistors (this gives them different sounds because they receive different amounts of energy). Connect the switches' outputs in a junction that needs to be connected to analog 0 and to ground through a resistor. 
+
+##### Code: 
+###### For this project, we will need to create an array of the four notes we want to use for each of our switches. Declare the array before the setup() to make it a global variable. Then, in the setup, start the serial communication with the computer. The last step is the loop, where we will use if statements to determine which note to play for each switch. We tell the Arduino to play the notes corresponding to the specified analog value and stop playing the tone when nothing is pressed. 
 
 #### Helpful Links:
 ##### * [Arduino Starter Kit: English Projects Book](https://www.amazon.com/Arduino-Starter-Kit-English-Official/dp/B009UKZV0A/ref=sr_1_4?dchild=1&keywords=arduino+starter+kit&qid=1623788219&sr=8-4)

@@ -10,7 +10,8 @@
 ###### In the sections labeled "code," I mainly explain and go over the parts that I think are important to highlight. If you want a more detailed explanation of each part of the code, please check the corresponding project's comments.
 
 ## Projects Table of Contents 
-1. [Project 1: Get to Know Your Tools] (https://github.com/bcuadraa/arduino_projects/blob/master/README.md#project-1-get-to-know-your-tools)
+### 1. [Project 1: Get to Know Your Tools] (https://github.com/bcuadraa/arduino_projects/blob/master/README.md#project-1-get-to-know-your-tools)
+### 2. [Project 2: Spaceship Interference]
 
 #### Project 1: "Get to Know Your Tools"
 ###### The first project does not include code because it is meant to help you get to know the different components and tools that the Arduino Kit includes and the basic principles of electricity, so it is not included in the repository.

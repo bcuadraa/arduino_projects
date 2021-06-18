@@ -10,8 +10,14 @@
 ###### In the sections labeled "code," I mainly explain and go over the parts that I think are important to highlight. If you want a more detailed explanation of each part of the code, please check the corresponding project's comments.
 
 ## Projects Table of Contents 
-### [Project 1: Get to Know Your Tools](https://github.com/bcuadraa/arduino_projects/blob/master/README.md#project-1-get-to-know-your-tools)
-### [Project 2: Spaceship Interference]
+### [Project 1: "Get to Know Your Tools"](https://github.com/bcuadraa/arduino_projects/blob/master/README.md#project-1-get-to-know-your-tools)
+### [Project 2: "Spaceship Interference"](https://github.com/bcuadraa/arduino_projects#project-2-spaceship-interference-1)
+### [Project 3: "Love-O-Meter"](https://github.com/bcuadraa/arduino_projects#project-3-love-o-meter)
+### [Project 4: "Color Mixing Lamp"](https://github.com/bcuadraa/arduino_projects#project-4-color-mixing-lamp)
+### [Project 5: "Mood Cue"](https://github.com/bcuadraa/arduino_projects#project-5-mood-cue)
+### [Project 6: "Light Theremin"](https://github.com/bcuadraa/arduino_projects#project-6-light-theremin)
+### [Project 7: "Keyboard Instrument"](https://github.com/bcuadraa/arduino_projects#project-7-keyboard-instrument)
+### [Project 8: "Digital Hourglass"](https://github.com/bcuadraa/arduino_projects#project-8-digital-hourglass)
 
 #### Project 1: "Get to Know Your Tools"
 ###### The first project does not include code because it is meant to help you get to know the different components and tools that the Arduino Kit includes and the basic principles of electricity, so it is not included in the repository.
